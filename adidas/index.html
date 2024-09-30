@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap - 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/469fbaf61b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="../index.html" class="back">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="container">
+
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+        <div class="nav">
+            <div class="logo">adidas<span class="reg">&reg;</span></div>
+            <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="bag"><i class="fa-solid fa-bag-shopping"></i></div>
+        </div>
+
+        <img src="img/hero.png" class="product-img" alt="">
+
+        <div class="product-text">
+            <h1 class="product-title">adidas.</h1>
+        </div>
+
+        <div class="product-desc">
+            <p>The pure comfort is here</p>
+            <button>reserve now</button>
+        </div>
+
+        <div class="size">
+            <ul>
+                <span>Size : </span>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+        </div>
+
+        <div class="bottom-img"></div>
+
+        <div class="bottom-right left-button">
+            <ul>
+                <li><i class="fa-solid fa-angle-left"></i></li>
+                <li><i class="fa-solid fa-angle-right"></i></li>
+            </ul>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        TweenMax.to('.first', 1.5, {
+            delay: 0.2,
+            left:'-100%',
+            ease:Expo.easeInOut,
+        })
+        TweenMax.to('.second', 1.5, {
+            delay: 0.4,
+            left:'-100%',
+            ease:Expo.easeInOut,
+        })
+        TweenMax.to('.third', 1.5, {
+            delay: 0.6,
+            left:'-100%',
+            ease:Expo.easeInOut,
+        })
+
+        TweenMax.from('.logo', 1, {
+            delay:1,
+            opacity:0,
+            x:-20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.menu', 1, {
+            delay:1.2,
+            opacity:0,
+            x:-20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.search', 1, {
+            delay:1.4,
+            opacity:0,
+            x:-20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.bag', 1, {
+            delay:1.6,
+            opacity:0,
+            x:-20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.staggerFrom('.media ul li', 1, {
+            delay: 2,
+            opacity: 0,
+            x: -20,
+            ease: Power3.easeInOut,
+        },0.08)
+        TweenMax.from('.size', 1, {
+            delay:1.8,
+            opacity:0,
+            x:-20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.staggerFrom('.size ul li', 1, {
+            delay: 2,
+            opacity: 0,
+            y: -20,
+            ease: Power3.easeInOut,
+        },0.08)
+        TweenMax.from('.bottom right ul li:first-child', 0.5,{
+            delay: 2.4,
+            opacity: 0,
+            x: -20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.bottom right ul li:last-child', 0.5,{
+            delay: 2.4,
+            opacity: 0,
+            x: -20,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.bottom-img', 1,{
+            delay: 2.4,
+            opacity: 0,
+            x: -20,
+            ease:Expo.easeInOut,
+        })
+
+        TweenMax.from('.product-title', 3,{
+            delay: 2.2,
+            opacity: 0,
+            y: 50,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.product-img', 1.5,{
+            delay: 3.5,
+            opacity: 0,
+            y:-800,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.product-desc p', 3,{
+            delay: 4,
+            opacity: 0,
+            y:-50,
+            ease:Expo.easeInOut,
+        })
+        TweenMax.from('.product-desc button', 3,{
+            delay: 4.5,
+            opacity: 0,
+            y: -50,
+            ease:Expo.easeInOut,
+        })
+    </script>
+</body>
+</html>
