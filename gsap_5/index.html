@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/469fbaf61b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="../index.html" class="back">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <h1>Here are some of my favourite projects</h1>
+    <div class="container">
+        <div class="card-container">
+            <img id="img-1" src="img/Batman v Superman.jpg" alt="">
+            <img id="img-2" src="img/Catwoman Anne Hathaway - vintage.png" alt="">
+            <img id="img-3" src="img/Deadpool Free Guy edit.png" alt="">
+            <img id="img-4" src="img/Dream.png" alt="">
+            <img id="img-5" src="img/Mando Maxwell Edit.png" alt="">
+            <img id="img-6" src="img/Gamora Thanos.jpg" alt="">
+            <img id="img-7" src="img/Superman x Homelander x Brightburn - final.png" alt="">
+            <img id="img-8" src="img/The Batman - Double Exposure.png" alt="">
+            <img id="img-9" src="img/Thor Light Streak - Final.png" alt="">
+            <img id="img-10" src="img/You Look Lonely, I can fix that.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        TweenMax.to("#img-1", 2, {
+            x: 300,
+            y: 120,
+            rotation: 15,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-2", 2, {
+            x: 300,
+            y: -180,
+            rotation: -15,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-3", 2, {
+            x: -300,
+            y: 100,
+            rotation: -20,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-4", 2, {
+            x: -500,
+            y: -200,
+            rotation: -15,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-5", 2, {
+            x: 40,
+            y: -200,
+            rotation: -15,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-6", 2, {
+            x: -250,
+            y: -200,
+            rotation: 20,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-7", 2, {
+            x: 600,
+            y: 100,
+            rotation: -10,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-8", 2, {
+            x: 550,
+            y: -200,
+            rotation: 10,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-9", 2, {
+            x: -550,
+            y: 20,
+            rotation: 10,
+            ease: Expo.easeInOut,
+        })
+        TweenMax.to("#img-10", 2, {
+            x: 10,
+            y: 100,
+            rotation: 10,
+            ease: Expo.easeInOut,
+        })
+
+        let images = document.querySelectorAll("img")
+        images.forEach((image) => {
+            image.addEventListener('mouseenter',()=>{
+                image.style.scale = 1.02
+            })
+            image.addEventListener('mouseleave',()=>{
+                image.style.scale = 1
+            })
+        })
+    </script>
+</body>
+
+</html>
